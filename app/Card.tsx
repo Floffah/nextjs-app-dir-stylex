@@ -60,16 +60,8 @@ const styles = stylex.create({
     padding: spacing.sm,
     transitionProperty: "background-color, border-color",
     transitionDuration: "400ms",
-<<<<<<< HEAD
     [tokens.arrowTransform]: {
       // eslint-disable-next-line @stylexjs/valid-styles
-||||||| parent of 7df8a26 (feat(nextConfig): transpile with swc stylex plugin)
-    // eslint-disable-next-line @stylexjs/valid-styles
-    [LOCAL_VAR]: {
-=======
-    [LOCAL_VAR]: {
-      // eslint-disable-next-line @stylexjs/valid-styles
->>>>>>> 7df8a26 (feat(nextConfig): transpile with swc stylex plugin)
       default: "translateX(0)",
       // eslint-disable-next-line @stylexjs/valid-styles
       ":hover": "translateX(4px)",
