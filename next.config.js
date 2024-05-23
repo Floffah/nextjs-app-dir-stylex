@@ -9,7 +9,6 @@ const nextConfig = {
   transpilePackages: ["@stylexjs/open-props"],
   // Optionally, add any other Next.js config below
   swcMinify: true,
-  transpilePackages: ["@stylexjs/open-props"],
   experimental: {
     mdxRs: true,
     swcPlugins: [[
