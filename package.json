@@ -27,7 +27,7 @@
     "@stylexjs/eslint-plugin": "^0.6.1",
     "@stylexjs/nextjs-plugin": "^0.6.1",
     "@stylexswc/nextjs-plugin": "0.1.0",
-    "@stylexswc/swc-plugin": "0.1.0",
+    "@stylexswc/swc-plugin": "0.2.0",
     "@swc/cli": "0.3.12",
     "@swc/core": "1.5.7",
     "@swc/plugin-noop": "2.0.3",
