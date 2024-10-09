@@ -1,3 +1,5 @@
+const path = require('path');
+const rootDir = __dirname;
 /** @type {import('next').NextConfig} */
 const stylexPlugin = require("@stylexswc/nextjs-plugin");
 const withMDX = require("@next/mdx")();
@@ -11,22 +13,22 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     mdxRs: true,
-    swcPlugins: [[
-      "@stylexswc/swc-plugin",
-      {
-        "dev": false,
-        "runtimeInjection": false,
-        "genConditionalClasses": true,
-        "treeshakeCompensation": true,
-        "unstable_moduleResolution": {
-          "type": "commonJS",
-          "rootDir": __dirname
-        }
-      }
-    ]],
   },
 };
 
 module.exports = stylexPlugin({
-  rootDir: __dirname,
+  rootDir,
+  // Add any Stylex options here
+  dev: process.env.NODE_ENV === 'development',
+  genConditionalClasses: true,
+  treeshakeCompensation: true,
+  aliases: {
+    '@/*': [
+      path.join(rootDir, '*'),
+    ],
+  },
+  unstable_moduleResolution: {
+    type: 'commonJS',
+    rootDir
+  },
 })(withMDX(nextConfig));
