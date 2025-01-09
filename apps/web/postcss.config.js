@@ -1,28 +1,24 @@
 const path = require("path");
 
-const rootDir = __dirname;
+const projectRoot = __dirname;
+const monorepoRoot = path.resolve(projectRoot, "../../");
 
 module.exports = {
     plugins: {
         "@stylexswc/postcss-plugin": {
-            include: [rootDir + "/src/**/*.{js,jsx,ts,tsx}"],
+            include: ["src/**/*.{js,jsx,ts,tsx}"],
             useCSSLayers: true,
             rsOptions: {
                 dev: process.env.NODE_ENV === "development",
                 test: process.env.NODE_ENV === "test",
-                runtimeInjection: false,
-                genConditionalClasses: true,
-                treeshakeCompensation: true,
-                useRemForFontSize: true,
                 aliases: {
-                    "@/*": [path.join(rootDir, "src/*")],
+                    "@/*": [path.join(projectRoot, "src/*")],
                 },
                 unstable_moduleResolution: {
                     type: "commonJS",
-                    rootDir,
+                    rootDir: monorepoRoot, // if you switch this to projectRoot it has the exact same behaviour
                 },
             },
-            cwd: rootDir,
         },
         "postcss-preset-env": {},
     },

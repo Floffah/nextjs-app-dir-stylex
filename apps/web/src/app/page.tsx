@@ -1,4 +1,5 @@
 import stylex, { StyleXStyles } from "@stylexjs/stylex";
+import {tokens} from "@/app/tokens.stylex";
 
 export default function Home() {
     return (
@@ -19,6 +20,6 @@ const styles = stylex.create({
     },
     text: {
         color: "white",
-        fontSize: 30,
+        fontSize: tokens.fontSize
     }
 })
