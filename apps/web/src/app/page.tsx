@@ -1,4 +1,4 @@
-import stylex, { StyleXStyles } from "@stylexjs/stylex";
+import stylex from "@stylexjs/stylex";
 import {tokens} from "@/app/tokens.stylex";
 
 export default function Home() {
