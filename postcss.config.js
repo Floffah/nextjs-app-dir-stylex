@@ -1,7 +1,6 @@
 const path = require("path");
 
 const projectRoot = __dirname;
-const monorepoRoot = path.resolve(projectRoot, "../../");
 
 module.exports = {
     plugins: {
@@ -16,7 +15,7 @@ module.exports = {
                 },
                 unstable_moduleResolution: {
                     type: "commonJS",
-                    rootDir: monorepoRoot, // if you switch this to projectRoot it has the exact same behaviour
+                    rootDir: projectRoot, // if you switch this to projectRoot it has the exact same behaviour
                 },
             },
         },
