@@ -1,6 +1,6 @@
 {
   "name": "nextjs-app-dir-stylex",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,11 +15,11 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@stylexswc/nextjs-plugin": "^0.6.0-rc.1",
-    "@stylexswc/postcss-plugin": "^0.6.0-rc.1",
-    "@stylexswc/rs-compiler": "^0.6.0-rc.1",
-    "@stylexswc/webpack-plugin": "^0.6.0-rc.1",
-    "@types/node": "^20",
+    "@stylexswc/nextjs-plugin": "^0.6.0-rc.2",
+    "@stylexswc/postcss-plugin": "^0.6.0-rc.2",
+    "@stylexswc/rs-compiler": "^0.6.0-rc.2",
+    "@stylexswc/webpack-plugin": "^0.6.0-rc.2",
+    "@types/bun": "^1.1.16",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "normalize.css": "^8.0.1",
